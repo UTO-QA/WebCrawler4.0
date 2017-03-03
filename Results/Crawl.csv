@@ -1,0 +1,32 @@
+http://isearch-qa.asu.edu/
+javascript:ASUHeader.toggleASU();,0,<urlopen error unknown url type: javascript>
+None,0,unknown url type: None
+https://washingtoncenter.asu.edu/,0,<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+http://www.asu.edu/classes,302,HTTP/URL Error
+http://www.thesundevils.com/,404,HTTP/URL Error
+http://www.thesundevils.com/main/Schedule.dbml?DB_LANG=C&DB_OEM_ID=30300,404,HTTP/URL Error
+http://www.thesundevils.com/ViewArticle.dbml?ATCLID=208252612&DB_OEM_ID=30300,404,HTTP/URL Error
+http://www.thesundevils.com/ViewArticle.dbml?ATCLID=208254939&DB_OEM_ID=30300,404,HTTP/URL Error
+http://www.sundevilclub.com/,404,HTTP/URL Error
+https://cfo.asu.edu/,302,HTTP/URL Error
+https://washingtoncenter.asu.edu/,0,<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+http://www.asu.edu/classes,302,HTTP/URL Error
+http://www.thesundevils.com/,404,HTTP/URL Error
+http://www.thesundevils.com/main/Schedule.dbml?DB_LANG=C&DB_OEM_ID=30300,404,HTTP/URL Error
+http://www.thesundevils.com/ViewArticle.dbml?ATCLID=208252612&DB_OEM_ID=30300,404,HTTP/URL Error
+http://www.thesundevils.com/ViewArticle.dbml?ATCLID=208254939&DB_OEM_ID=30300,404,HTTP/URL Error
+http://www.sundevilclub.com/,404,HTTP/URL Error
+https://cfo.asu.edu/,302,HTTP/URL Error
+None,0,unknown url type: None
+None,0,unknown url type: None
+None,0,unknown url type: None
+mailto:Paula.Bryant@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Sylvia.Symonds@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Barbara.Weigand@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Roselda.Graham@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Feldman@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Eileen.Klein@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Denise.Spisak@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Steven.Clayden@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:ELISABETH.LUQUEZ@asu.edu,0,<urlopen error unknown url type: mailto>
+mailto:Wendy.M.King@asu.edu,0,<urlopen error unknown url type: mailto>

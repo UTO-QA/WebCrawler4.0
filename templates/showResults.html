@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title> Results </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="row" style="margin-top:20%;">
+				<div class="col-md-4 col-md-offset-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Login</div>
+							<div class="panel-body">
+							<form method="POST" action="{{url_for('displayResults')}}" class="form-submit">
+								<label name="run_id">Past Runs</label>
+								<select id="run_id" name="run_id">
+									{% for row in rows%}
+										<option value={{row[0]}}>{{row}}</option>
+									{% endfor %}
+								</select>
+								<br/>
+								<button type="submit" class="btn btn-primary" value="Select">Show Results</button>
+							</form>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+		
+</html>

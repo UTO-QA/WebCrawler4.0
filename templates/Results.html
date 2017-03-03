@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title> Results </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<style>
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			th, td {
+				padding: 5px;
+				text-align: left;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<table>
+			<tr>
+			<th>Url</th>
+			<th>Error Code</th>
+			<th>Comment</th>
+			<th>Parent Page</th>
+			</tr>
+			
+			{% for row in rows%}
+			<tr>
+			<td> <a href={{row[5]}}>{{row[5]}}</a> </td>
+			<td> {{row[6]}} </td>
+			<td> {{row[7]}} </td>
+			<td> <a href={{row[8]}}>{{row[8]}}</a> </td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+		
+</html>

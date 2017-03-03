@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Credentials</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="margin-top:20%;">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Login</div>
+						<div class="panel-body">
+							<form class="form-horizontal" method="post" action="{{url_for('formDetails')}}" role="form" class="form-submit">
+								<div class="form-group">
+									<label for="username" class="col-sm-3 control-label">Username</label>
+									<div class="col-sm-9">
+										<div class="input-group">
+											<span class="input-group-addon glyphicon glyphicon-user"></span>
+											<input type="text" class="form-control" id="username" name="username" placeholder="ASURITE Username">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-3 control-label">Password</label>
+									<div class="col-sm-9">
+										<div class="input-group">
+										<span class="input-group-addon glyphicon glyphicon-lock"></span>
+											<input type="password" name="password" class="form-control" id="password" placeholder="ASURITE Password">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">Crawl MyASU</label>
+									<div class="radio" style="padding-left:7%">
+										<label class="radio-inline">
+												<div class="input-group">
+													<input type="radio" name="myASU" id="myASUProd" value="Production">MyASU Production
+												</div>
+										</label>
+									</div>
+									<div class="radio" style="padding-left:7%">
+										<label class="radio-inline">
+												<div class="input-group">
+													<input type="radio" name="myASU" id="myASUQA" value="QA">MyASU-QA
+												</div>
+										</label>
+									</div>
+								</div>
+								<label style="text-align:center" class="col-sm-3 control-label">OR</label>
+								<br>
+								<br>
+								<div class="form-group">
+									<label for="website" class="col-sm-3 control-label">Website</label>
+									<div class="col-sm-9">
+										<div class="input-group">
+											<input type="text" name="website" class="form-control" id="website" placeholder="Website to Crawl">
+										</div>
+									</div>
+								</div>
+								<br>
+								<br>
+								<div class="form-group last">
+									<div class="col-sm-offset-3 col-sm-9">
+										<button type="submit" class="btn btn-primary">Submit Credentials</button>
+									</div>
+								</div>
+							</form>
+							
+							<form method="POST" action="{{url_for('displayResults')}}" class="form-submit">
+								<label name="run_id">Past Runs</label>
+								<select id="run_id" name="run_id">
+									{% for row in rows%}
+										<option value={{row[0]}}>{{row}}</option>
+									{% endfor %}
+								</select>
+								<br/>
+								<button type="submit" class="btn btn-primary" value="Select">Show Results</button>
+							</form>
+						</div>
+				</div>
+			</div>
+			</div>
+		</div>
+</body>
+</html>
