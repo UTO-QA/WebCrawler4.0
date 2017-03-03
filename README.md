@@ -17,5 +17,6 @@ Execution:
 To View past run results:
 
 Select the run from the Past Runs dropdown.
-The dropdown contains the run details in the format:
-  <id> <run_date> <website>
+The dropdown contains the run details in the format
+
+  \<id> \<run_date> \<website>
