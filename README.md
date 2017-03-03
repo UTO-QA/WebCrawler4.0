@@ -15,6 +15,7 @@ Execution:
 3. Enter the Website to crawl and click on 'Submit Credentials'
 
 To View past run results:
+
 Select the run from the Past Runs dropdown.
 The dropdown contains the run details in the format:
   <id> <run_date> <website>
