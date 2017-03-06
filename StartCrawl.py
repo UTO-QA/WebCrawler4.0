@@ -56,10 +56,7 @@ def displayResults():
 def writeResults():
 	x=Crawler();
 	run_id=request.form['run_id'];
-	status=Crawler.writeResults(x,run_id);
-	message="Successfully Written to File";
-	if status is False:
-		message="Error occured during write";
+	message=Crawler.writeResults(x,run_id);
 	return render_template("WriteToFile.html",message=message);
 	
 	

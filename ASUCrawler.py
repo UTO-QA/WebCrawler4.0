@@ -18,9 +18,17 @@ class Crawler:
 		db=sqliteDB();
 		rows=sqliteDB.getResults(db,run_id);
 		dir=os.path.dirname(os.path.abspath(__file__));
+		time="";
+		website="";
+		if(len(rows)>0):
+			time=rows[0][1];
+			website=rows[0][2];
+			
 		filename=dir+"\Results\Export\\"+run_id+".csv";
 		try:
 			f=open(filename,'w');
+			f.write("Website :"+website+"\n");
+			f.write("Run on :"+time+"\n");
 			f.write("Url,Error Code,Comment,Parent Page\n");
 			for row in rows:
 				for i in range(5,9):					
@@ -31,10 +39,10 @@ class Crawler:
 			f.close();
 		except Exception as e:
 			print(str(e));
-			return False;
+			return "Error during write to file";
 		
 		print("Wrote to file :"+filename);
-		return True;
+		return "Succesfully wrote to file "+filename;
 		
 	def dbResults(self,website):
 		db=sqliteDB();

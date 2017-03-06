@@ -4,6 +4,12 @@
 	<title>Login Credentials</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<style>
+		.col-md-4 {
+			width: 50%;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -37,12 +43,7 @@
 										<label class="radio-inline">
 												<div class="input-group">
 													<input type="radio" name="myASU" id="myASUProd" value="Production">MyASU Production
-												</div>
-										</label>
-									</div>
-									<div class="radio" style="padding-left:7%">
-										<label class="radio-inline">
-												<div class="input-group">
+													<br>
 													<input type="radio" name="myASU" id="myASUQA" value="QA">MyASU-QA
 												</div>
 										</label>
@@ -68,7 +69,7 @@
 								</div>
 							</form>
 							
-							<form method="POST" action="{{url_for('displayResults')}}" class="form-submit">
+							<form  class="form-horizontal"  method="POST" action="{{url_for('displayResults')}}" class="form-submit">
 								<label name="run_id">Past Runs</label>
 								<select id="run_id" name="run_id">
 									{% for row in rows%}
@@ -76,7 +77,12 @@
 									{% endfor %}
 								</select>
 								<br/>
-								<button type="submit" class="btn btn-primary" value="Select">Show Results</button>
+								<br/>
+								<div class="form-group last">
+									<div class="col-sm-offset-3 col-sm-9">								
+										<button type="submit" class="btn btn-primary" value="Select">Show Results</button>
+									</div>
+								</div>
 							</form>
 						</div>
 				</div>
