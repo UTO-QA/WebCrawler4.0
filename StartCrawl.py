@@ -50,7 +50,18 @@ def displayResults():
 	db=sqliteDB();
 	run_id=request.form['run_id'];
 	rows=sqliteDB.getResults(db,run_id);
-	return render_template("Results.html",rows=rows);	
+	return render_template("Results.html",rows=rows,run_id=run_id);	
+
+@app.route('/writeResults',methods=["POST"])
+def writeResults():
+	x=Crawler();
+	run_id=request.form['run_id'];
+	status=Crawler.writeResults(x,run_id);
+	message="Successfully Written to File";
+	if status is False:
+		message="Error occured during write";
+	return render_template("WriteToFile.html",message=message);
+	
 	
 if __name__=="__main__":	
 	app.run();

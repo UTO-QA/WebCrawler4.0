@@ -5,6 +5,7 @@ import os
 import re
 from sqliteDB import sqliteDB
 from  urlparse import urljoin
+from exportToFile import exportToFile
 
 class Crawler:
 	def __init__(self):
@@ -13,16 +14,27 @@ class Crawler:
 		self.result=[]; #old	
 		self.resultList=[]; #new
 	
-	def writeResults(self):
+	def writeResults(self,run_id):
+		db=sqliteDB();
+		rows=sqliteDB.getResults(db,run_id);
 		dir=os.path.dirname(os.path.abspath(__file__));
-		filename=dir+"\Results\Crawl.csv";
-		f=open(filename,'w');
+		filename=dir+"\Results\Export\\"+run_id+".csv";
+		try:
+			f=open(filename,'w');
+			f.write("Url,Error Code,Comment,Parent Page\n");
+			for row in rows:
+				for i in range(5,9):					
+					if row[i] is not None:
+						f.write(row[i]+",");
+						
+				f.write('\n');
+			f.close();
+		except Exception as e:
+			print(str(e));
+			return False;
 		
-		for r in self.urlList:
-
-			f.write(r.l+","+r.status_code+","+r+"\n");
-		
-		f.close();
+		print("Wrote to file :"+filename);
+		return True;
 		
 	def dbResults(self,website):
 		db=sqliteDB();

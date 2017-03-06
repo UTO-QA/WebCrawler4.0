@@ -15,6 +15,13 @@
 	</head>
 	
 	<body>
+	
+		<form method="POST" action="{{url_for('writeResults')}}" class="form-submit">
+			<label name="run_id" >Run ID: {{run_id}}</label><br>
+			<input type="hidden" id="run_id" name="run_id" value={{run_id}}></input>
+			<button type="submit" class="btn btn-primary" value="write">Write to File</button>
+		</form>
+		
 		<table>
 			<tr>
 			<th>Url</th>
@@ -32,6 +39,8 @@
 			</tr>
 			{% endfor %}
 		</table>
+		
+
 	</body>
 		
 </html>
