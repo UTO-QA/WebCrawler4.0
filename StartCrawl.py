@@ -5,6 +5,7 @@ from sqliteDB import sqliteDB;
 
 app=Flask(__name__);
 
+@app.route('/home')
 @app.route('/')
 def loginToCrawler():
 	db=sqliteDB();
